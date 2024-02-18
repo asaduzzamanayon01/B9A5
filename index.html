@@ -1,15 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>T Tickets</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
 			rel="stylesheet"
 			type="text/css"
 		/>
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- custom css -->
+		<link rel="stylesheet" href="styles/styles.css" />
 	</head>
-	<body></body>
+	<body class="w-full min-h-screen mx-auto space-y-16">
+		<!-- header section -->
+		<header class="space-y-12 mx-32">
+			<div class="flex justify-between mt-10">
+				<div class="title-text text-4xl font-extrabold text-gray-900">
+					T-Ticket
+				</div>
+				<div>
+					<button
+						class="btn text-green-600 border-green-300 bg-green-200 active:bg-green-300 hover:bg-green-300"
+					>
+						Bus
+						<img src="images/bus-icon.png" alt="" />
+					</button>
+				</div>
+			</div>
+			<div
+				class="hero min-h-screen rounded-3xl"
+				style="background-image: url(images/banner.png)"
+			>
+				<div class=""></div>
+				<div class="hero-content text-center text-white">
+					<div class="text-center">
+						<h1 class="mb-5 font-bold text-7xl text-center">
+							End-to-End Travel with <br />
+							<span class="text-green-500">T Tickets</span>
+						</h1>
+						<p class="mb-5 text-center">
+							Yes, you can run unit tests and view the results directly within
+							the app. The <br />
+							integrated testing features allow for a streamlined .
+						</p>
+						<button
+							class="btn text-black bg-green-500 border-none text-xl active:bg-green-600 hover:bg-green-600"
+						>
+							Buy Tickets
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- main section -->
+		<main class="space-y-12 mx-32">
+			<div class="best-offer-section space-y-10">
+				<h1 class="text-4xl text-center font-bold">Best offers for you</h1>
+				<div class="coupon-section mt-10 flex justify-center gap-5">
+					<div class="coupon-1 bg-yellow-400 h-56 flex rounded-2xl flex-1">
+						<div class="flex-col p-10 h-full items-center">
+							<div><h2 class="font-extrabold text-4xl">15% OFF</h2></div>
+							<div><p class="font-bold">on your next purchase</p></div>
+							<div>
+								<p class="text-gray-600 font-normal">use by January 2024</p>
+							</div>
+						</div>
+						<img src="images/cupon-devider.png" alt="" />
+						<div class="flex-col items-center p-10">
+							<h2 class="font-bold text-4xl">NEW15</h2>
+							<p>Coupon Code</p>
+						</div>
+					</div>
+					<div class="coupon-1 bg-pink-400 h-56 flex rounded-2xl flex-1">
+						<div class="flex-col p-10 h-full items-center">
+							<div><h2 class="font-extrabold text-4xl">15% OFF</h2></div>
+							<div><p class="font-bold">on your next purchase</p></div>
+							<div>
+								<p class="text-gray-600 font-normal">use by January 2024</p>
+							</div>
+						</div>
+						<img src="images/cupon-devider.png" alt="" />
+						<div class="flex-col items-center p-10">
+							<h2 class="font-bold text-4xl">NEW15</h2>
+							<p>Coupon Code</p>
+						</div>
+					</div>
+				</div>
+				<div class="offer-btn flex justify-center">
+					<button
+						class="btn text-green-600 border-green-300 bg-green-200 active:bg-green-300 hover:bg-green-300"
+					>
+						See All Offers
+					</button>
+				</div>
+			</div>
+			<!-- ticket system section -->
+		</main>
+		<!-- footer section -->
+		<!-- script section -->
+	</body>
 </html>
