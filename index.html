@@ -46,6 +46,7 @@
 							integrated testing features allow for a streamlined .
 						</p>
 						<button
+							id="buy-ticket-btn"
 							class="btn text-black bg-green-500 border-none text-xl active:bg-green-600 hover:bg-green-600"
 						>
 							Buy Tickets
@@ -101,6 +102,7 @@
 
 			<!-- ticket system section -->
 			<div
+				id="ticket-section-container"
 				class="ticket-section-container bg-slate-100 mt-20 border border-green-300 rounded-3xl"
 			>
 				<h1 class="font-bold text-4xl text-center mt-28">T-Tickets</h1>
@@ -131,7 +133,7 @@
 										<button
 											class="btn text-green-600 border-green-300 bg-green-200 active:bg-green-300 hover:bg-green-300"
 										>
-											<img src="images/bus-icon.png" alt="" />
+											<img src="images/seat-green.png" alt="" />
 											<span id="seat-number text-lg">40</span>seats left
 										</button>
 									</div>
@@ -181,9 +183,136 @@
 						</div>
 					</div>
 				</div>
+				<div class="seat-selection-container bg-white mx-32 mt-20 rounded-2xl">
+					<div
+						class="seat-selection-card-container flex gap-10 justify-between p-10"
+					>
+						<div class="w-3/5">
+							<h1 class="text-2xl font-semibold">Select Your Seat</h1>
+							<div class="border border-dashed border-gray-400 my-6"></div>
+							<div class="row-1 flex justify-between">
+								<div class="available flex gap-4">
+									<img src="images/seat-gray.png" alt="" />
+									<h3>Available</h3>
+								</div>
+								<div class="selected flex gap-4">
+									<img src="images/seat-green-filled.png" alt="" />
+									<h3>Selected</h3>
+								</div>
+							</div>
+							<div class="border border-dashed border-gray-400 mt-6"></div>
+							<div class="flex justify-end my-8">
+								<button class="btn">
+									<img
+										class="p-3"
+										src="images/steering-wheel-icon.svg"
+										alt=""
+									/>
+								</button>
+							</div>
+							<div
+								id="seat-container-box"
+								class="seat-container-box space-y-10"
+							>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-between gap-6 w-1/2">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											A
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											A1
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											A2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between gap-6 w-1/2">
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											A3
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											A4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-between gap-6 w-1/2">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											B
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											B1
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											B2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between gap-6 w-1/2">
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											B3
+										</button>
+										<button
+											id="seat-btn"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+										>
+											B4
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-l border-dashed border-gray-400 mt-6"></div>
+						<div class="w-2/5"></div>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- footer section -->
 		<!-- script section -->
+		<script src="navigation.js"></script>
 	</body>
 </html>
+
+<!-- <div class="custom-row-section flex justify-between gap-8">
+	<div class="custom-row-1">
+		<div class="seat-2">
+			<button class="btn text-lg px-12">A1</button>
+		</div>
+		<div class="seat-3">
+			<button class="btn text-lg px-12">A2</button>
+		</div>
+	</div>
+	<div class="custom-row-2">
+		<div class="seat-4">
+			<button class="btn text-lg px-12">A3</button>
+		</div>
+		<div class="seat-5">
+			<button class="btn text-lg px-12">A4</button>
+		</div>
+	</div>
+</div> -->
