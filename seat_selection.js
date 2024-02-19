@@ -1,3 +1,4 @@
+// get the seat-btn ID
 const seatButtons = document.getElementsByClassName("seat-btn");
 // get the seatNumber ID
 const seatNumber = document.getElementById("seat-number");
@@ -11,7 +12,6 @@ function updateSeatNumberTable() {
 	seatNumber.innerText = seatCount;
 }
 
-// Loop through each seat button and add event listener
 for (let i = 0; i < seatButtons.length; i++) {
 	const seatButton = seatButtons[i];
 	seatButton.addEventListener("click", function () {
@@ -24,10 +24,10 @@ for (let i = 0; i < seatButtons.length; i++) {
 
 			// Adjust the selected count based on the button's current state
 			if (this.classList.contains("bg-green-500")) {
-				selectedCount++; // If the button is selected
+				selectedCount++;
 				seatCount--;
 			} else {
-				selectedCount--; // If the button is deselected
+				selectedCount--;
 				seatCount++;
 			}
 
@@ -40,10 +40,9 @@ for (let i = 0; i < seatButtons.length; i++) {
 	});
 }
 
-// Initial update of the seat number table
 updateSeatNumberTable();
 
-// Add event listeners to buttons
+// Append selected seats to the table
 const tableBody = document.getElementById("table-body");
 for (let i = 0; i < seatButtons.length; i++) {
 	seatButtons[i].addEventListener("click", function () {
@@ -54,8 +53,6 @@ for (let i = 0; i < seatButtons.length; i++) {
 
 // Track the number of selected seats
 let selectedSeatCount = 0;
-
-// Object to track selected seats
 const selectedSeatMap = {};
 
 // Function to update base total price
@@ -77,11 +74,9 @@ function addToTableRow(seat) {
 		// If seat is already selected, remove the corresponding row
 		const existingRow = document.getElementById(`row-${seat}`);
 		existingRow.remove();
-		// Update selectedSeatMap object and decrement selectedSeatCount
 		delete selectedSeatMap[seat];
 		selectedSeatCount--;
 	} else if (selectedSeatCount < 4) {
-		// If seat is not selected and selectedSeatCount is less than 5, add new row
 		newRow.id = `row-${seat}`;
 		newRow.innerHTML = `
             <td>${seat}</td>
@@ -92,8 +87,6 @@ function addToTableRow(seat) {
 		selectedSeatMap[seat] = true;
 		selectedSeatCount++;
 	}
-
-	// Update total price after any changes to selectedSeatCount
 	updateTotalPrice();
 }
 
