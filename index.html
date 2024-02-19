@@ -12,6 +12,23 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- custom css -->
 		<link rel="stylesheet" href="styles/styles.css" />
+		<style>
+			/* Style to hide the body content when modal is displayed */
+			.body-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(
+					0,
+					0,
+					0,
+					0.5
+				); /* Semi-transparent black overlay */
+				z-index: 999; /* Ensure it appears above other content */
+			}
+		</style>
 	</head>
 	<body class="w-full min-h-screen mx-auto space-y-16">
 		<!-- header section -->
@@ -222,28 +239,24 @@
 											A
 										</button>
 										<button
-											id="seat-btn"
-											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											A1
 										</button>
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											A2
 										</button>
 									</div>
 									<div class="second-colm flex justify-between w-1/2">
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											A3
 										</button>
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											A4
 										</button>
@@ -257,28 +270,24 @@
 											B
 										</button>
 										<button
-											id="seat-btn"
-											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											B1
 										</button>
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											B2
 										</button>
 									</div>
 									<div class="second-colm flex justify-between w-1/2">
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											B3
 										</button>
 										<button
-											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											B4
 										</button>
@@ -300,41 +309,53 @@
 													<span
 														id="seat-number-table"
 														class="bg-green-400 text-gray-100 px-2 rounded-xl"
-														>2</span
+														>0</span
 													>
 												</th>
 												<th><span class="text-black">Class</span></th>
 												<th><span class="text-black">Price</span></th>
 											</tr>
 										</thead>
-										<tbody>
-											<!-- row 1 -->
-											<tr>
-												<td>A1</td>
-												<td>Economy</td>
-												<td>550</td>
-											</tr>
-											<!-- row 2 -->
-											<tr class="border-b border-dashed border-gray-400">
-												<td>B1</td>
-												<td>Economy</td>
-												<td>550</td>
-											</tr>
-											<!-- row 3 -->
-											<tr>
-												<td>Total Price</td>
-												<td></td>
-												<td>1150</td>
-											</tr>
+										<tbody id="table-body">
+											<!-- <tr>
+												<td>hey</td>
+												<td>1</td>
+												<td>2</td>
+											</tr> -->
 										</tbody>
 									</table>
 								</div>
-								<div class="p-4">
+								<div class="border-b border-dashed border-gray-400"></div>
+								<div class="overflow-x-auto">
+									<table class="table">
+										<!-- head -->
+										<thead>
+											<tr class="flex justify-between">
+												<th>
+													<span class="text-black text-xl">Base Total</span>
+												</th>
+												<th>
+													<span
+														id="base-total-price"
+														class="text-black text-xl pr-14"
+														>0</span
+													>
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div id="apply-coupon-input-field" class="p-4">
 									<label
 										class="input input-bordered flex items-center justify-between gap-2"
 									>
-										<input type="text" placeholder="Have any Coupon?" />
+										<input
+											id="coupon-field"
+											type="text"
+											placeholder="Have any Coupon?"
+										/>
 										<button
+											id="apply-btn"
 											class="btn text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
 										>
 											Apply
@@ -354,7 +375,7 @@
 													<span
 														id="grand-total-price"
 														class="text-black text-xl pr-14"
-														>1000</span
+														>0</span
 													>
 												</th>
 											</tr>
@@ -393,11 +414,45 @@
 										class="input input-bordered"
 									/>
 								</label>
-								<button
+								<!-- modal button -->
+								<!-- Open the modal using ID.showModal() method -->
+								<button class="btn w-full" onclick="my_modal_1.showModal()">
+									Next
+								</button>
+								<dialog id="my_modal_1" class="modal">
+									<div
+										class="modal-box flex flex-col items-center justify-center gap-4"
+									>
+										<img src="images/success.png" alt="" />
+										<h3 class="font-bold text-lg">SUCCESS</h3>
+										<div class="flex flex-col items-center justify-center">
+											<span class="font-bold text-center"
+												>Thank you for Booking Our Bus Seats.
+											</span>
+											<span class="font-bold text-center"
+												>We are working hard to find the best service and deals
+												for you.</span
+											>
+											Shortly you will find a confirmation in your email.
+										</div>
+										<div class="modal-action">
+											<form method="dialog">
+												<!-- if there is a button in form, it will close the modal -->
+												<button
+													id="continue-btn"
+													class="btn text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
+												>
+													Continue
+												</button>
+											</form>
+										</div>
+									</div>
+								</dialog>
+								<!-- <button
 									class="btn text-white text-2xl bg-green-500 border-none active:bg-green-600 hover:bg-green-600 w-full"
 								>
 									Next
-								</button>
+								</button> -->
 							</div>
 						</div>
 					</div>
@@ -407,5 +462,7 @@
 		<!-- footer section -->
 		<!-- script section -->
 		<script src="navigation.js"></script>
+		<script src="seat_selection.js"></script>
+		<script src="price.js"></script>
 	</body>
 </html>
