@@ -134,7 +134,7 @@
 											class="btn text-green-600 border-green-300 bg-green-200 active:bg-green-300 hover:bg-green-300"
 										>
 											<img src="images/seat-green.png" alt="" />
-											<span id="seat-number text-lg">40</span>seats left
+											<span class="text-sm" id="seat-number">8</span>Seats left
 										</button>
 									</div>
 								</div>
@@ -215,7 +215,7 @@
 								class="seat-container-box space-y-10"
 							>
 								<div class="container-box flex justify-between gap-20">
-									<div class="first-colm flex justify-between gap-6 w-1/2">
+									<div class="first-colm flex justify-around w-3/4">
 										<button
 											class="btn bg-white no-animation hover:bg-white border-none"
 										>
@@ -223,7 +223,7 @@
 										</button>
 										<button
 											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
 										>
 											A1
 										</button>
@@ -234,7 +234,7 @@
 											A2
 										</button>
 									</div>
-									<div class="second-colm flex justify-between gap-6 w-1/2">
+									<div class="second-colm flex justify-between w-1/2">
 										<button
 											id="seat-btn"
 											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
@@ -250,7 +250,7 @@
 									</div>
 								</div>
 								<div class="container-box flex justify-between gap-20">
-									<div class="first-colm flex justify-between gap-6 w-1/2">
+									<div class="first-colm flex justify-around w-3/4">
 										<button
 											class="btn bg-white no-animation hover:bg-white border-none"
 										>
@@ -258,7 +258,7 @@
 										</button>
 										<button
 											id="seat-btn"
-											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
 										>
 											B1
 										</button>
@@ -269,7 +269,7 @@
 											B2
 										</button>
 									</div>
-									<div class="second-colm flex justify-between gap-6 w-1/2">
+									<div class="second-colm flex justify-between w-1/2">
 										<button
 											id="seat-btn"
 											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded"
@@ -287,7 +287,119 @@
 							</div>
 						</div>
 						<div class="border-l border-dashed border-gray-400 mt-6"></div>
-						<div class="w-2/5"></div>
+						<div class="w-2/5">
+							<h1 class="text-2xl font-semibold mb-6">Select Your Seat</h1>
+							<div class="table-section bg-slate-100 rounded-xl p-8">
+								<div class="overflow-x-auto">
+									<table class="table">
+										<!-- head -->
+										<thead>
+											<tr>
+												<th>
+													<span class="text-black">Seat</span>
+													<span
+														id="seat-number-table"
+														class="bg-green-400 text-gray-100 px-2 rounded-xl"
+														>2</span
+													>
+												</th>
+												<th><span class="text-black">Class</span></th>
+												<th><span class="text-black">Price</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- row 1 -->
+											<tr>
+												<td>A1</td>
+												<td>Economy</td>
+												<td>550</td>
+											</tr>
+											<!-- row 2 -->
+											<tr class="border-b border-dashed border-gray-400">
+												<td>B1</td>
+												<td>Economy</td>
+												<td>550</td>
+											</tr>
+											<!-- row 3 -->
+											<tr>
+												<td>Total Price</td>
+												<td></td>
+												<td>1150</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="p-4">
+									<label
+										class="input input-bordered flex items-center justify-between gap-2"
+									>
+										<input type="text" placeholder="Have any Coupon?" />
+										<button
+											class="btn text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
+										>
+											Apply
+										</button>
+									</label>
+								</div>
+								<div class="border-b border-dashed border-gray-400"></div>
+								<div class="overflow-x-auto">
+									<table class="table">
+										<!-- head -->
+										<thead>
+											<tr class="flex justify-between">
+												<th>
+													<span class="text-black text-xl">Grand Total</span>
+												</th>
+												<th>
+													<span
+														id="grand-total-price"
+														class="text-black text-xl pr-14"
+														>1000</span
+													>
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="table-form space-y-5 mt-6">
+								<label class="form-control">
+									<div class="label">
+										<span class="label-text text-lg">Passenger Name</span>
+									</div>
+									<input
+										type="text"
+										placeholder="Enter Your name"
+										class="input input-bordered"
+									/>
+								</label>
+								<label class="form-control">
+									<div class="label">
+										<span class="label-text text-lg">Phone Number*</span>
+									</div>
+									<input
+										type="text"
+										placeholder="Enter Your Phone number"
+										class="input input-bordered"
+									/>
+								</label>
+								<label class="form-control">
+									<div class="label">
+										<span class="label-text text-lg">E-mail ID</span>
+									</div>
+									<input
+										type="text"
+										placeholder="Enter Your email ID"
+										class="input input-bordered"
+									/>
+								</label>
+								<button
+									class="btn text-white text-2xl bg-green-500 border-none active:bg-green-600 hover:bg-green-600 w-full"
+								>
+									Next
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -297,22 +409,3 @@
 		<script src="navigation.js"></script>
 	</body>
 </html>
-
-<!-- <div class="custom-row-section flex justify-between gap-8">
-	<div class="custom-row-1">
-		<div class="seat-2">
-			<button class="btn text-lg px-12">A1</button>
-		</div>
-		<div class="seat-3">
-			<button class="btn text-lg px-12">A2</button>
-		</div>
-	</div>
-	<div class="custom-row-2">
-		<div class="seat-4">
-			<button class="btn text-lg px-12">A3</button>
-		</div>
-		<div class="seat-5">
-			<button class="btn text-lg px-12">A4</button>
-		</div>
-	</div>
-</div> -->
