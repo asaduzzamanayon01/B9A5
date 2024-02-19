@@ -3,39 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>T Tickets</title>
+		<title>T-Tickets</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
 			rel="stylesheet"
 			type="text/css"
 		/>
 		<script src="https://cdn.tailwindcss.com"></script>
-		<!-- custom css -->
-		<link rel="stylesheet" href="styles/styles.css" />
+		<!-- google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- custom fonts and colors -->
 		<style>
-			/* Style to hide the body content when modal is displayed */
-			.body-overlay {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(
-					0,
-					0,
-					0,
-					0.5
-				); /* Semi-transparent black overlay */
-				z-index: 999; /* Ensure it appears above other content */
+			.font-raleway {
+				font-family: "Raleway", sans-serif;
 			}
 		</style>
 	</head>
-	<body class="w-full min-h-screen mx-auto space-y-16">
+	<body class="w-full min-h-screen mx-auto space-y-16 font-raleway">
 		<!-- header section -->
 		<header class="space-y-12 mx-32">
 			<div class="flex justify-between mt-10">
 				<div class="title-text text-4xl font-extrabold text-gray-900">
-					T-Ticket
+					T-Tickets
 				</div>
 				<div>
 					<button
@@ -55,12 +50,11 @@
 					<div class="text-center">
 						<h1 class="mb-5 font-bold text-7xl text-center">
 							End-to-End Travel with <br />
-							<span class="text-green-500">T Tickets</span>
+							<span class="text-green-500">T-Tickets</span>
 						</h1>
-						<p class="mb-5 text-center">
-							Yes, you can run unit tests and view the results directly within
-							the app. The <br />
-							integrated testing features allow for a streamlined .
+						<p class="mb-5 text-center text-lg">
+							Book your bus tickets conveniently with T-Tickets – your reliable
+							partner for hassle-free travel experiences! 🚌✨
 						</p>
 						<button
 							id="buy-ticket-btn"
@@ -77,9 +71,9 @@
 			<div class="best-offer-section-container mx-32">
 				<div class="best-offer-section space-y-10">
 					<h1 class="text-4xl text-center font-bold">Best offers for you</h1>
-					<div class="coupon-section mt-10 flex justify-center gap-5">
+					<div class="coupon-section mt-10 flex justify-center gap-6">
 						<div class="coupon-1 bg-yellow-400 h-56 flex rounded-2xl flex-1">
-							<div class="flex-col p-10 h-full items-center">
+							<div class="flex flex-col items-center justify-center w-3/5">
 								<div><h2 class="font-extrabold text-4xl">15% OFF</h2></div>
 								<div><p class="font-bold">on your next purchase</p></div>
 								<div>
@@ -87,22 +81,22 @@
 								</div>
 							</div>
 							<img src="images/cupon-devider.png" alt="" />
-							<div class="flex-col items-center p-10">
+							<div class="flex flex-col items-center justify-center p-10">
 								<h2 class="font-bold text-4xl">NEW15</h2>
 								<p>Coupon Code</p>
 							</div>
 						</div>
 						<div class="coupon-1 bg-pink-400 h-56 flex rounded-2xl flex-1">
-							<div class="flex-col p-10 h-full items-center">
-								<div><h2 class="font-extrabold text-4xl">15% OFF</h2></div>
+							<div class="flex flex-col items-center justify-center w-3/5">
+								<div><h2 class="font-extrabold text-4xl">20% OFF</h2></div>
 								<div><p class="font-bold">on your next purchase</p></div>
 								<div>
 									<p class="text-gray-600 font-normal">use by January 2024</p>
 								</div>
 							</div>
 							<img src="images/cupon-devider.png" alt="" />
-							<div class="flex-col items-center p-10">
-								<h2 class="font-bold text-4xl">NEW15</h2>
+							<div class="flex flex-col items-center justify-center p-10">
+								<h2 class="font-bold text-4xl">Couple 20</h2>
 								<p>Coupon Code</p>
 							</div>
 						</div>
@@ -120,7 +114,7 @@
 			<!-- ticket system section -->
 			<div
 				id="ticket-section-container"
-				class="ticket-section-container bg-slate-100 mt-20 border border-green-300 rounded-3xl"
+				class="ticket-section-container bg-slate-100 mt-20 rounded-t-3xl border-t-2 border-solid border-green-500"
 			>
 				<h1 class="font-bold text-4xl text-center mt-28">T-Tickets</h1>
 				<p class="font-normal text-center mt-8">
@@ -356,10 +350,15 @@
 										/>
 										<button
 											id="apply-btn"
-											class="btn text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
+											class="py-1 px-4 rounded-lg ml-9 text-lg text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
 										>
 											Apply
 										</button>
+										<!-- <button
+											class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
+										>
+											Click me
+										</button> -->
 									</label>
 								</div>
 								<div class="border-b border-dashed border-gray-400"></div>
@@ -430,8 +429,8 @@
 												>Thank you for Booking Our Bus Seats.
 											</span>
 											<span class="font-bold text-center"
-												>We are working hard to find the best service and deals
-												for you.</span
+												>We are working hard to find the best service and
+												deals.</span
 											>
 											Shortly you will find a confirmation in your email.
 										</div>
@@ -440,7 +439,7 @@
 												<!-- if there is a button in form, it will close the modal -->
 												<button
 													id="continue-btn"
-													class="btn text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
+													class="btn px-20 text-sm text-white bg-green-500 border-none active:bg-green-600 hover:bg-green-600"
 												>
 													Continue
 												</button>
@@ -460,6 +459,7 @@
 			</div>
 		</main>
 		<!-- footer section -->
+
 		<!-- script section -->
 		<script src="navigation.js"></script>
 		<script src="seat_selection.js"></script>

@@ -101,7 +101,7 @@ function addToTableRow(seat) {
 const applyBtn = document.getElementById("apply-btn");
 
 applyBtn.addEventListener("click", function () {
-	const coupon1 = "NEW 15";
+	const coupon1 = "NEW15";
 	const coupon2 = "Couple 20";
 	const couponField = document.getElementById("coupon-field");
 	const couponValue = couponField.value;
