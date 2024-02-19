@@ -42,11 +42,11 @@
 				</div>
 			</div>
 			<div
-				class="hero min-h-screen rounded-3xl"
+				class="hero min-h-screen rounded-3xl relative"
 				style="background-image: url(images/banner.png)"
 			>
-				<div class=""></div>
-				<div class="hero-content text-center text-white">
+				<div class="hero-overlay bg-opacity-60 rounded-3xl"></div>
+				<div class="hero-content text-center text-neutral-content">
 					<div class="text-center">
 						<h1 class="mb-5 font-bold text-7xl text-center">
 							End-to-End Travel with <br />
@@ -62,14 +62,21 @@
 						>
 							Buy Tickets
 						</button>
+						<div
+							class="banner-img-box flex justify-center items-end gap-6 absolute -bottom-10 left-0 right-0 mt-10"
+						>
+							<img src="images/Group 11.png" alt="" class="" />
+							<img src="images/Group 12.png" alt="" class="" />
+							<img src="images/Group 13.png" alt="" class="" />
+						</div>
 					</div>
 				</div>
 			</div>
 		</header>
 		<!-- main section -->
-		<main class="space-y-20">
-			<div class="best-offer-section-container mx-32 mt-12">
-				<div class="best-offer-section space-y-10">
+		<main class="">
+			<div class="best-offer-section-container mx-32 mt-36">
+				<div class="best-offer-section">
 					<h1 class="text-4xl text-center font-bold">Best offers for you</h1>
 					<div class="coupon-section mt-10 flex justify-center gap-6">
 						<div class="coupon-1 bg-yellow-400 h-56 flex rounded-2xl flex-1">
@@ -141,7 +148,7 @@
 									</div>
 									<div class="card-right-side text-lg">
 										<button
-											class="btn text-green-600 border-green-300 bg-green-200 active:bg-green-300 hover:bg-green-300"
+											class="btn no-animation border-none text-green-600 bg-green-200 hover:bg-green-200"
 										>
 											<img src="images/seat-green.png" alt="" />
 											<span class="text-sm" id="seat-number">8</span>Seats left
@@ -212,7 +219,9 @@
 							</div>
 							<div class="border border-dashed border-gray-400 mt-6"></div>
 							<div class="flex justify-end my-8">
-								<button class="btn">
+								<button
+									class="btn no-animation border-none bg-slate-100 hover:bg-slate-100"
+								>
 									<img
 										class="p-3"
 										src="images/steering-wheel-icon.svg"
@@ -283,6 +292,254 @@
 											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
 										>
 											B4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											C
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											C1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											C2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											C3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											C4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											D
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											D1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											D2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											D3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											D4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											E
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											E1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											E2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											E3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											E4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											F
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											F1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											F2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											F3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											F4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											G
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											G1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											G2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											G3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											G4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											H
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											H1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											H2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											H3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											H4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											I
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											I1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											I2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											I3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											I4
+										</button>
+									</div>
+								</div>
+								<div class="container-box flex justify-between gap-20">
+									<div class="first-colm flex justify-around w-3/4">
+										<button
+											class="btn bg-white no-animation hover:bg-white border-none"
+										>
+											J
+										</button>
+										<button
+											class="mx-8 btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											J1
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											J2
+										</button>
+									</div>
+									<div class="second-colm flex justify-between w-1/2">
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											J3
+										</button>
+										<button
+											class="btn bg-slate-100 hover:bg-green-500 hover:text-white text-gray-500 font-bold py-2 px-14 rounded seat-btn"
+										>
+											J4
 										</button>
 									</div>
 								</div>
